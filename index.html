@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: hsl(207, 11%, 81%);
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #4CAF50;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    #shopping-list {
+      list-style: none;
+      padding: 0;
+      width: 320px;
+    }
+
+    #shopping-list li {
+      margin: 5px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #shopping-list li.purchased {
+      text-decoration: line-through;
+      background-color: #d3ffd3;
+    }
+
+    #shopping-list li:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My Shopping List</h1>
+  <input type="text" id="new-item" placeholder="Enter item here">
+  <button id="add-button">Add</button>
+  <button id="mark-purchased">Mark Purchased</button>
+  <button id="clear-list">Clear List</button>
+  <select id="sort-select">
+    <option value="none">None</option>
+    <option value="alphabetical">A-Z</option>
+  </select>
+  <ul id="shopping-list"></ul>
+
+  <script src="/assets/index.js"></script>
+</body>
+
+</html>
